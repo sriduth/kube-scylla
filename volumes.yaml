@@ -1,0 +1,42 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: storage-scylla-0
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/sda1/scylla-0-data"
+
+---
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: storage-scylla-1
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/sda1/scylla-1-data"
+
+---
+
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: storage-scylla-2
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/sda1/scylla-2-data"

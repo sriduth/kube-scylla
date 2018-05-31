@@ -1,0 +1,54 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: storage-scylla-0
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  volumeName: storage-scylla-0
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+  selector:
+    matchLabels:
+      releasename: scylla-0-claim
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: storage-scylla-1
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  volumeName: storage-scylla-1
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+  selector:
+    matchLabels:
+      releasename: scylla-1-claim
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: storage-scylla-2
+spec:
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  volumeName: storage-scylla-2
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+  selector:
+    matchLabels:
+      releasename: scylla-2-claim
